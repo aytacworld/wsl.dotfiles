@@ -1,0 +1,9 @@
+[user]
+  email = adem.aytac@ibz.be
+  name = Adem Aytac
+[credential]
+	# helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
+  helper = cache
+  helper = /usr/bin/pass-git-helper
+	useHttpPath = true
+

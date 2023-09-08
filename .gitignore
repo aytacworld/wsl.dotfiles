@@ -1,0 +1,10 @@
+coc
+k9s
+nvm
+rest-client
+nvim/*
+!nvim/init.vim
+!nvim/conf
+pass-git-helper
+zsh/private/*
+!zsh/private/.gitkeep
