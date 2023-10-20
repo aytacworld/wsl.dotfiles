@@ -31,4 +31,5 @@ return require("lazy").setup({
   {'hrsh7th/nvim-cmp'},
   {'L3MON4D3/LuaSnip'},
   {'folke/which-key.nvim'},
+  {'tpope/vim-commentary'},
 })
