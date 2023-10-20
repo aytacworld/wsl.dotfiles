@@ -19,6 +19,7 @@ return require("lazy").setup({
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
   { 'rose-pine/neovim', name = 'rose-pine' },
+  { 'folke/tokyonight.nvim', name = 'tokyonight' },
   { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' },
   { 'theprimeagen/harpoon' },
   { 'mbbill/undotree' },
