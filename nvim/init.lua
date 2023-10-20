@@ -1,1 +1,1 @@
-require("darkking")
+require('darkking')
