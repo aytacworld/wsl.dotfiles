@@ -13,8 +13,6 @@ alias d-rmi="docker images -a -q | xargs docker rmi"
 alias t="i3-sensible-terminal ."
 # Lauch key recognition tool
 alias key="$BIN/key.sh"
-# kubectl (kubernetes)
-alias k="kubectl"
 
 if [ -f "${ZSH_PRIVATE}/alias.sh" ]; then
   source $ZSH_PRIVATE/alias.sh
