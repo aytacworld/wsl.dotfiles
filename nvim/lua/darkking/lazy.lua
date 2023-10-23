@@ -14,10 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Installing other plugins using PluginManager
 return require("lazy").setup({
-  {
-    'nvim-telescope/telescope.nvim', tag = '0.1.4',
-    dependencies = { 'nvim-lua/plenary.nvim' }
-  },
+  { 'nvim-telescope/telescope.nvim', tag = '0.1.4', dependencies = { 'nvim-lua/plenary.nvim' } },
   { 'rose-pine/neovim', name = 'rose-pine' },
   { 'folke/tokyonight.nvim', name = 'tokyonight' },
   { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' },
