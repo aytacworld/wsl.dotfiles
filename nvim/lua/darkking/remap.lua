@@ -16,8 +16,10 @@ vim.keymap.set('n', 'N', 'Nzzzv')
 -- when pasting something, keep the pasted text in clipboard, instead of the deleted or overwritten text
 vim.keymap.set('x', '<leader>p', '"_dP')
 -- yank to system clipboard
-vim.keymap.set({'n', 'v'}, '<leader>y', [["+y]])
-vim.keymap.set('n', '<leader>Y', [["+Y]])
+vim.keymap.set({'n', 'v'}, '<leader>y', [["*y]])
+vim.keymap.set('n', '<leader>Y', [["*Y]])
+vim.keymap.set({'n', 'v'}, '<leader>pp', [["*p]])
+vim.keymap.set('n', '<leader>PP', [["*P]])
 -- deleting and voiding register
 vim.keymap.set({'n', 'v'}, '<leader>d', [["_d]])
 -- disable Q
