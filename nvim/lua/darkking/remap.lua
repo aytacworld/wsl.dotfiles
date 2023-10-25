@@ -16,10 +16,10 @@ vim.keymap.set('n', 'N', 'Nzzzv')
 -- when pasting something, keep the pasted text in clipboard, instead of the deleted or overwritten text
 vim.keymap.set('x', '<leader>p', '"_dP')
 -- yank to system clipboard
-vim.keymap.set({'n', 'v'}, '<leader>y', [["*y]])
-vim.keymap.set('n', '<leader>Y', [["*Y]])
-vim.keymap.set({'n', 'v'}, '<leader>pp', [["*p]])
-vim.keymap.set('n', '<leader>PP', [["*P]])
+vim.keymap.set({'n', 'v'}, '<leader>y', [["+y]])
+vim.keymap.set('n', '<leader>Y', [["+Y]])
+vim.keymap.set({'n', 'v'}, '<leader>pp', [["+p]])
+vim.keymap.set('n', '<leader>PP', [["+P]])
 -- deleting and voiding register
 vim.keymap.set({'n', 'v'}, '<leader>d', [["_d]])
 -- disable Q
@@ -34,7 +34,6 @@ vim.keymap.set('n', '<leader>j', '<cmd>lprev<CR>zz')
 -- replace current word (current word = selected or cursor)
 vim.keymap.set('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 -- make file executable
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+vim.keymap.set('n', '<leader>x', '<cmd>!chmod +x %<CR>', { silent = true })
 -- source vim lua file
 vim.keymap.set('n', '<leader><leader>', function() vim.cmd('so') end)
-
