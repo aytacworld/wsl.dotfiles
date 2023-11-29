@@ -26,6 +26,7 @@ vim.keymap.set({'n', 'v'}, '<leader>d', [["_d]])
 vim.keymap.set('n', 'Q', '<nop>')
 -- format file
 vim.keymap.set('n', '<leader>f', vim.lsp.buf.format)
+vim.keymap.set('n', 'FF', '<cmd>!npx eslint % --quiet --fix<CR> ', { silent = true })
 -- quick navigation
 vim.keymap.set('n', '<C-K>', '<cmd>cnext<CR>zz')
 vim.keymap.set('n', '<C-J>', '<cmd>cprev<CR>zz')

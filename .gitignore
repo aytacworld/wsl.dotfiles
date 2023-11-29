@@ -8,3 +8,4 @@
 /pass-git-helper
 /zsh/private/*
 !/zsh/private/.gitkeep
+/.gitconfig
