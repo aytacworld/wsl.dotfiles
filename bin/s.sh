@@ -16,12 +16,20 @@ previousBranch=$([[ ! -d $tempFolderName ]] \
 checkout () {
     echo $branch > $foldername
     git checkout $1
+    pass show open
     git pull
 }
 
 commit () {
     git add .
     git commit -m "$1"
+}
+
+push () {
+    # this will unlock the pass database
+    pass show open
+    [ ! -z "$1"  ] && git push -f && exit 0
+    git push -u $remote $branch
 }
 
 case $1 in
@@ -33,10 +41,10 @@ case $1 in
         ;;
     push)
         [[ ! -z "$2" ]] && commit "$2"
-        git push -u $remote $branch
+        push
         ;;
     force)
-        git push -f
+        push force
         ;;
     create)
         git checkout -b $2
