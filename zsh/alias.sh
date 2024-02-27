@@ -1,5 +1,7 @@
 # Launch neovim
 alias v="nvim"
+# Launch temp file in neovim
+alias vt="nvim $RANDOM"
 # custom git commands (maybe change this to g instead of s)
 alias s="$BIN/s.sh"
 # Close terminal
