@@ -35,16 +35,6 @@ require('mason-lspconfig').setup({
       local lua_opts = lsp_zero.nvim_lua_ls()
       lsp_config.lua_ls.setup(lua_opts)
     end,
-    -- gopls = function ()
-    --     lsp_config.gopls.setup({
-    --         filetypes = {
-    --             'go',
-    --             'gomod',
-    --             'gowork',
-    --             'gotmpl',
-    --         },
-    --     })
-    -- end
   }
 })
 
