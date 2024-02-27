@@ -1,4 +1,5 @@
 local lsp_zero = require('lsp-zero')
+local lsp_config = require('lspconfig')
 
 lsp_zero.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
@@ -19,14 +20,31 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'tsserver', 'rust_analyzer', 'angularls', 'lua_ls', 'eslint'},
+  ensure_installed = {
+      'tsserver',
+      'rust_analyzer',
+      'angularls',
+      'lua_ls',
+      'eslint',
+      'gopls',
+  },
   -- , 'prettier', 'stylelint'},
   handlers = {
     lsp_zero.default_setup,
     lua_ls = function()
       local lua_opts = lsp_zero.nvim_lua_ls()
-      require('lspconfig').lua_ls.setup(lua_opts)
+      lsp_config.lua_ls.setup(lua_opts)
     end,
+    -- gopls = function ()
+    --     lsp_config.gopls.setup({
+    --         filetypes = {
+    --             'go',
+    --             'gomod',
+    --             'gowork',
+    --             'gotmpl',
+    --         },
+    --     })
+    -- end
   }
 })
 

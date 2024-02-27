@@ -11,6 +11,8 @@ export ZSH="$HOME/.oh-my-zsh"
 
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
+export PATH="$PATH:/usr/local/go/bin"
+
 export NVM_DIR="${XDG_CONFIG_HOME}/nvm"
 export NVM_LAZY_LOAD=true
 export NVM_LAZY_LOAD_EXTRA_COMMANDS=('nvim')

@@ -17,7 +17,7 @@ return require("lazy").setup({
   { 'nvim-telescope/telescope.nvim', tag = '0.1.4', dependencies = { 'nvim-lua/plenary.nvim' } },
   { 'folke/tokyonight.nvim', name = 'tokyonight' },
   { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' },
-  { 'theprimeagen/harpoon', branch = 'harpoon2', dependencies = { 'nvim-lua/plenary.nvim' } },
+  { 'theprimeagen/harpoon' },
   { 'mbbill/undotree' },
   { 'tpope/vim-fugitive' },
   {'williamboman/mason.nvim'},
