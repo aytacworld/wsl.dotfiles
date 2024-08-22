@@ -1,8 +1,20 @@
 #!/bin/bash
 
+if [[ "$1" == "clone" ]]; then
+    repourl=$2
+    foldername=$(echo "$repourl" | awk -F '/_git/' '{print $2}')
+
+    pass show open
+    git clone "$repourl"
+    echo $foldername
+    cd "./$foldername"
+
+    exit 0
+fi
+
 isGitFolder="$(pwd)/.git"
 
-[[ ! -d $isGitFolder ]] && echo "run \"git init\" first" && exit 1
+[[ ! -d $isGitFolder ]] &&  echo "run \"git init\" first" && exit 1
 
 remote="origin"
 branch=$(git branch --show-current)
