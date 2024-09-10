@@ -15,6 +15,8 @@ alias d-rmi="docker images -a -q | xargs docker rmi"
 alias t="i3-sensible-terminal ."
 # Lauch key recognition tool
 alias key="$BIN/key.sh"
+# Convert passed value to base64
+alias b64="read && echo -n $REPLY | base64"
 
 if [ -f "${ZSH_PRIVATE}/alias.sh" ]; then
   source $ZSH_PRIVATE/alias.sh

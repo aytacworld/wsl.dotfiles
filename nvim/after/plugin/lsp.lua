@@ -21,7 +21,8 @@ end)
 require('mason').setup({})
 require('mason-lspconfig').setup({
   ensure_installed = {
-      'tsserver',
+      -- 'tsserver',
+      'vtsls',
       'rust_analyzer',
       'angularls',
       'lua_ls',
